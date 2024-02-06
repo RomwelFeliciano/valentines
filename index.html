@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentine's Day</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: "#da373d",
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="max-h-[780px] min-h-screen max-w-full bg-neutral-500 relative">
+    <div
+        class="show-yes absolute flex flex-col w-full justify-center items-center min-h-screen transition-all duration-1000 ease-in-out">
+        <img src="bubududu.gif" class="rounded-lg">
+        <h1 class="text-center text-3xl text-white font-bold">Happy Happy Happy</h1>
+    </div>
+    <main class="min-h-screen w-full bg-neutral-500 flex justify-center items-center">
+        <div class="happy-valentines">
+            <div class="valentines-day-card">
+                <div class="clouds"></div>
+                <div class="hearts">
+                    <div class="heartOne">
+                        <div class="left-side"></div>
+                        <div class="right-side"></div>
+                    </div>
+                    <div class="heartTwo">
+                        <div class="left-side"></div>
+                        <div class="right-side"></div>
+                    </div>
+                    <div class="heartThree">
+                        <div class="left-side"></div>
+                        <div class="right-side"></div>
+                    </div>
+                    <div class="heartFour">
+                        <div class="left-side"></div>
+                        <div class="right-side"></div>
+                    </div>
+                    <div class="heartFive">
+                        <div class="left-side"></div>
+                        <div class="right-side"></div>
+                    </div>
+                </div>
+                <div class="text"><span>Will you be my</br> Valentine's Date?</div>
+            </div>
+        </div>
+    </main>
+
+    <button
+        class="btn-yes fixed bottom-36 left-[44%] bg-red-300 w-24 h-10 rounded-lg text-red-950 border-2 border-white hover:bg-red-400 font-bold z-50"
+        onclick="handleYes()">Yes</button>
+    <button
+        class="btn-no fixed bottom-36 left-[51%] bg-red-300 w-24 h-10 rounded-lg text-red-950 border-2 border-white hover:bg-red-400 font-bold z-50"
+        onclick="changePosition()">No</button>
+
+    <script>
+        let no = document.querySelector('.btn-no')
+        let yes = document.querySelector('.btn-yes')
+        let main = document.querySelector('main')
+        let show = document.querySelector('.show-yes')
+
+        function changePosition() {
+            let random1 = Math.random(99);
+            let random2 = Math.random(99);
+
+            let x = Math.random() * window.innerWidth
+            let y = Math.random() * window.innerHeight
+            no.style.left = x + 'px';
+            no.style.top = y + 'px';
+        }
+
+        function handleYes() {
+            main.style.display = 'none'
+            no.style.display = 'none'
+            yes.style.display = 'none'
+            show.style.opacity = 100
+        }
+    </script>
+</body>
+
+</html>
