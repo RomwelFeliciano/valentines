@@ -203,7 +203,7 @@
 .btn-yes,
 .btn-no {
     opacity: 0;
-    animation: show 3s ease forwards .6s;
+    animation: show 3s ease forwards 6s;
     transition: 2s;
 }
 
